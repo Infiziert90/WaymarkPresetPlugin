@@ -168,7 +168,7 @@ public partial class ConfigWindow
         ImGui.SliderInt(Language.CircleComputerTextNumberofPoints, ref CircleComputerNumPoints, 1, 8);
         ImGui.InputFloat(Language.CircleComputerTextAngleOffset, ref CircleComputerAngleOffsetDeg);
         string[] markerOrderOptions = { "ABCD1234", "A1B2C3D4", "1A2B3C4D" };
-        if (ImGui.BeginCombo(Language.CircleComputerTextMarkerOrder, CircleComputerMarkerOrder))
+        if (CircleComputerNumPoints == 8 && ImGui.BeginCombo(Language.CircleComputerTextMarkerOrder, CircleComputerMarkerOrder))
         {
             foreach (var option in markerOrderOptions)
             {
@@ -257,7 +257,7 @@ public partial class ConfigWindow
             computedPoints[i] += center;
         }
 
-        if (circleComputerMarkerOrder != null)
+        if (circleComputerMarkerOrder != null && numPoints == 8)
         {
             var orderedPoints = new Vector3[8];
             var markerOrderMap = new Dictionary<char, int>
