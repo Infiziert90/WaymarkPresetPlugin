@@ -1,11 +1,12 @@
-using System;
-using System.ComponentModel;
-using System.IO;
-using System.Numerics;
 using Dalamud.Interface.Textures.TextureWraps;
 using Dalamud.Interface.Utility;
 using Dalamud.Interface.Utility.Raii;
 using ImGuiNET;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.IO;
+using System.Numerics;
 using WaymarkPresetPlugin.Resources;
 
 namespace WaymarkPresetPlugin.Windows.Config;
@@ -41,6 +42,7 @@ public partial class ConfigWindow
     private float CircleComputerRadiusYalms = 20f;
     private int CircleComputerNumPoints = 8;
     private float CircleComputerAngleOffsetDeg;
+    private string CircleComputerMarkerOrder;
     private IDalamudTextureWrap CoordinateSystemsDiagram;
     private HelpWindowPage CurrentHelpPage = HelpWindowPage.General;
 
@@ -165,10 +167,25 @@ public partial class ConfigWindow
         ImGui.InputFloat(Language.CircleComputerTextRadius, ref CircleComputerRadiusYalms);
         ImGui.SliderInt(Language.CircleComputerTextNumberofPoints, ref CircleComputerNumPoints, 1, 8);
         ImGui.InputFloat(Language.CircleComputerTextAngleOffset, ref CircleComputerAngleOffsetDeg);
+        string[] markerOrderOptions = { "ABCD1234", "A1B2C3D4", "1A2B3C4D" };
+        if (ImGui.BeginCombo(Language.CircleComputerTextMarkerOrder, CircleComputerMarkerOrder))
+        {
+            foreach (var option in markerOrderOptions)
+            {
+                bool isSelected = (CircleComputerMarkerOrder == option);
+                if (ImGui.Selectable(option, isSelected))
+                    CircleComputerMarkerOrder = option;
+
+                if (isSelected)
+                    ImGui.SetItemDefaultFocus();
+            }
+            ImGui.EndCombo();
+        }
+
 
         ImGuiHelpers.ScaledDummy(5.0f);
 
-        var points = ComputeRadialPositions(CircleComputerCenter, CircleComputerRadiusYalms, CircleComputerNumPoints, CircleComputerAngleOffsetDeg);
+        var points = ComputeRadialPositions(CircleComputerCenter, CircleComputerRadiusYalms, CircleComputerNumPoints, CircleComputerAngleOffsetDeg, CircleComputerMarkerOrder);
         for (var i = 0; i < 8; ++i)
         {
             if (i < points.Length)
@@ -223,25 +240,41 @@ public partial class ConfigWindow
         }
     }
 
-    private Vector3[] ComputeRadialPositions(Vector3 center, float radiusYalms, int numPoints, float angleOffsetDeg = 0f)
+    private Vector3[] ComputeRadialPositions(Vector3 center, float radiusYalms, int numPoints, float angleOffsetDeg = 0f, string? circleComputerMarkerOrder = null)
     {
-        //	Can't have less than one point (even that makes little sense, but it's technically allowable).
         numPoints = Math.Max(1, numPoints);
         var computedPoints = new Vector3[numPoints];
 
-        //	Zero azimuth is facing North (90 degrees)
         angleOffsetDeg -= 90f;
         var stepAngleDeg = 360.0 / numPoints;
 
-        //	Compute the coordinates on the circle about the center point.
         for (var i = 0; i < numPoints; ++i)
         {
-            //	Because of FFXIV's coordinate system, we need to go backward in angle.
             var angleRad = (i * stepAngleDeg + angleOffsetDeg) * Math.PI / 180.0;
             computedPoints[i].X = (float)Math.Cos(angleRad);
             computedPoints[i].Z = (float)Math.Sin(angleRad);
             computedPoints[i] *= radiusYalms;
             computedPoints[i] += center;
+        }
+
+        if (circleComputerMarkerOrder != null)
+        {
+            var orderedPoints = new Vector3[8];
+            var markerOrderMap = new Dictionary<char, int>
+            {
+                { 'A', 0 }, { 'B', 1 }, { 'C', 2 }, { 'D', 3 },
+                { '1', 4 }, { '2', 5 }, { '3', 6 }, { '4', 7 }
+            };
+
+            for (var i = 0; i < circleComputerMarkerOrder.Length; ++i)
+            {
+                if (i < numPoints)
+                {
+                    orderedPoints[markerOrderMap[circleComputerMarkerOrder[i]]] = computedPoints[i];
+                }
+            }
+
+            return orderedPoints;
         }
 
         return computedPoints;
