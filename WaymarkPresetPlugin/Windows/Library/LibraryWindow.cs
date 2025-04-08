@@ -684,7 +684,10 @@ public class LibraryWindow : Window, IDisposable
     public void TryDeselectPreset()
     {
         if (!Plugin.EditorWindow.EditingPreset)
+        {
+            Plugin.InfoPaneWindow.IsOpen = false;
             SelectedPreset = -1;
+        }
     }
 
     private bool IsZoneFilteredBySearch(string zoneFilterString, ZoneInfo zoneInfo)
