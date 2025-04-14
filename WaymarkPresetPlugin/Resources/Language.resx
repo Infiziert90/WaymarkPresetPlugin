@@ -1,517 +1,618 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <root>
-    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <xsd:element name="root" msdata:IsDataSet="true">
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
 
-        </xsd:element>
-    </xsd:schema>
-    <resheader name="resmimetype">
-        <value>text/microsoft-resx</value>
-    </resheader>
-    <resheader name="version">
-        <value>1.3</value>
-    </resheader>
-    <resheader name="reader">
-        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
-    <resheader name="writer">
-        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
-
-    <data name="TextCommandDescription" xml:space="preserve">
-        <value>Performs waymark preset commands.  Use "{0}" for detailed usage information.</value>
-    </data>
-    <data name="TextCommandResponseHelpSubcommands" xml:space="preserve">
-        <value>Valid commands are as follows: {0}, {1}, {2}, {3}, {4}, and {5}.  If no command is provided, the preset library will be opened.  Type "{6} &lt;command&gt;" for detailed subcommand information.</value>
-    </data>
-    <data name="TextCommandResponseHelpConfig" xml:space="preserve">
-        <value>Opens the settings window.</value>
-    </data>
-    <data name="TextCommandResponseHelpSlotInfo" xml:space="preserve">
-        <value>Prints the data saved in the game's slots to the chat window.  Usage: "{0} slot".  The slot number can be any valid game slot.</value>
-    </data>
-    <data name="TextCommandResponseHelpPlace" xml:space="preserve">
-        <value>Places the preset with the specified name (if possible).  Quotes MUST be used around the name.  May also specify preset index without quotes instead.  Usage: "{0} &lt;name&gt;|&lt;index&gt;".  Name must match exactly (besides case).  Index can be any valid libary preset number.</value>
-    </data>
-    <data name="TextCommandResponseHelpImport" xml:space="preserve">
-        <value>Copies one of the game's five preset slots to the library.  Usage: "{0} slot".  The slot number can be any valid game slot.  Command-line import of a formatted preset string is not supported due to length restrictions in the game's chat box.</value>
-    </data>
-    <data name="TextCommandResponseHelpExport" xml:space="preserve">
-        <value>Copies a preset from the library to the specified game slot *or* copies a preset to the clipboard, depending on flags and parameters.  Usage: "{0} [{1}] [{2}] slot|index [slot]".  The slot number can be any valid game slot, and index can be any valid library preset number.  Use of the {3} flag specifies that the first number is a game slot, not a library index.  Use of the {4} flag includes the last-modified time in the clipboard export.</value>
-    </data>
-    <data name="TextCommandResponseHelpExportAll" xml:space="preserve">
-        <value>Copies all presets in the library to the clipboard, one per line.  Add {0} if you wish to include the last-modified timestamp in the export.</value>
-    </data>
-    <data name="TextCommandResponseHelp" xml:space="preserve">
-        <value>Use "{0}" to open the GUI.  Use "{1}" for a list of text commands.</value>
-    </data>
-    <data name="TextCommandResponseSlotInfoSuccess1" xml:space="preserve">
-        <value>Slot {0} Contents : {1}</value>
-    </data>
-    <data name="TextCommandResponseSlotInfoError1" xml:space="preserve">
-        <value>An unknown error occured while trying to read the game's waymark data.</value>
-    </data>
-    <data name="TextCommandResponseSlotInfoError2" xml:space="preserve">
-        <value>Unable to read game's waymark data.</value>
-    </data>
-    <data name="TextCommandResponseSlotInfoError3" xml:space="preserve">
-        <value>An invalid game slot number was provided.</value>
-    </data>
-    <data name="TextCommandResponsePlaceError1" xml:space="preserve">
-        <value>Unable to find preset "{0}".</value>
-    </data>
-    <data name="TextCommandResponsePlaceError2" xml:space="preserve">
-        <value>Invalid preset number "{0}".</value>
-    </data>
-    <data name="TextCommandResponsePlaceError3" xml:space="preserve">
-        <value>An unknown error occured placing preset {0}.</value>
-    </data>
-    <data name="TextCommandResponsePlaceError4" xml:space="preserve">
-        <value>Invalid preset number "{0}".</value>
-    </data>
-    <data name="TextCommandResponsePlaceError5" xml:space="preserve">
-        <value>Unable to place preset.  This probably means that the plugin needs to be updated for a new version of FFXIV.</value>
-    </data>
-    <data name="TextCommandResponseImportSuccess1" xml:space="preserve">
-        <value>Imported game preset {0} as library preset {1}.</value>
-    </data>
-    <data name="TextCommandResponseImportError1" xml:space="preserve">
-        <value>An unknown error occured while trying to read the game's waymark data.</value>
-    </data>
-    <data name="TextCommandResponseImportError2" xml:space="preserve">
-        <value>Unable to read game's waymark data.  This probably means that the plugin needs to be updated for a new version of FFXIV.</value>
-    </data>
-    <data name="TextCommandResponseImportError3" xml:space="preserve">
-        <value>An invalid game slot number was provided: "{0}".</value>
-    </data>
-    <data name="TextCommandResponseExportError1" xml:space="preserve">
-        <value>No slot or index numbers were provided.</value>
-    </data>
-    <data name="TextCommandResponseExportError2" xml:space="preserve">
-        <value>An invalid game slot number ({0}) was provided.</value>
-    </data>
-    <data name="TextCommandResponseExportError3" xml:space="preserve">
-        <value>An invalid library index ({0}) was provided.</value>
-    </data>
-    <data name="TextCommandResponseExportSuccess1" xml:space="preserve">
-        <value>Copied to clipboard.</value>
-    </data>
-    <data name="TextCommandResponseExportError4" xml:space="preserve">
-        <value>An invalid game slot number to export ({0}) was provided.</value>
-    </data>
-    <data name="TextCommandResponseExportError5" xml:space="preserve">
-        <value>An invalid library index ({0}) was provided.</value>
-    </data>
-    <data name="TextCommandResponseExportSuccess2" xml:space="preserve">
-        <value>Preset exported to game slot {0}.</value>
-    </data>
-    <data name="TextCommandResponseExportError6" xml:space="preserve">
-        <value>Unable to write to game slot {0}!</value>
-    </data>
-    <data name="TextCommandResponseExportError7" xml:space="preserve">
-        <value>An invalid game slot number ({0}) was provided as the target.</value>
-    </data>
-    <data name="TextCommandResponseExportError8" xml:space="preserve">
-        <value>An unknown error occured while trying to export the preset.</value>
-    </data>
-    <data name="TextCommandResponseExportAllSuccess1" xml:space="preserve">
-        <value>Waymark library copied to clipboard.</value>
-    </data>
-    <data name="TextCommandResponseExportAllError1" xml:space="preserve">
-        <value>An unknown error occured while trying to copy presets to clipboard.</value>
-    </data>
-    <data name="WindowTitleDebugTools" xml:space="preserve">
-        <value>Debug Tools</value>
-    </data>
-    <data name="WindowTitlePresetEditor" xml:space="preserve">
-        <value>Preset Editor</value>
-    </data>
-    <data name="EditWindowTextOOBWarningMessage" xml:space="preserve">
-        <value>SE has banned people for placing out of bounds waymarks.  Please use caution when manually editing waymark coordinates.</value>
-    </data>
-    <data name="EditWindowTextName" xml:space="preserve">
-        <value>Name: </value>
-    </data>
-    <data name="EditWindowTextActiveColumnHeader" xml:space="preserve">
-        <value>Active</value>
-    </data>
-    <data name="DragandDropPreviewEditSwapWaymark" xml:space="preserve">
-        <value>Swap Waymark {0} with...</value>
-    </data>
-    <data name="EditWindowTextZoneDropdownLabel" xml:space="preserve">
-        <value>Zone: </value>
-    </data>
-    <data name="EditWindowTextZoneSearchLabel" xml:space="preserve">
-        <value>Search: </value>
-    </data>
-    <data name="ButtonSave" xml:space="preserve">
-        <value>Save</value>
-    </data>
-    <data name="ButtonCancel" xml:space="preserve">
-        <value>Cancel</value>
-    </data>
-    <data name="ButtonMapView" xml:space="preserve">
-        <value>Map View</value>
-    </data>
-    <data name="WindowTitleWaymarkHelp" xml:space="preserve">
-        <value>Waymark Help</value>
-    </data>
-    <data name="HelpWindowTextGeneral1" xml:space="preserve">
-        <value>All presets in this plugin's list are fully separate from the game's presets.  This allows you to store an unlimited number of presets, as well as to easily back up and share them, or import presets that others have shared with you.</value>
-    </data>
-    <data name="HelpWindowTextGeneral2" xml:space="preserve">
-        <value>Selecting a preset in the library will show a window to the side with information about that preset, such as where the waymarks are placed, as well as actions that you can take with that preset.</value>
-    </data>
-    <data name="HelpWindowTextGeneral3" xml:space="preserve">
-        <value>If you want to copy a preset in the library to a game slot, select that preset in the list, and then press the button with the number of the slot to which you want to copy it.  If you want to import a preset from the game's list into the library, scroll down to "Import Options" and press the button of the slot that you wish to import from the game.  This is also where you can paste presets to import them from outside of the game.</value>
-    </data>
-    <data name="HelpWindowTextGeneral4" xml:space="preserve">
-        <value>If you wish to share a preset with someone else, you can select the preset in the library, and click the "Export to Clipboard" button.</value>
-    </data>
-    <data name="HelpWindowTextGeneral5" xml:space="preserve">
-        <value>The plugin also allows you to place and save waymarks directly to/from the field.  These are what the "Place" and "Save Current Waymarks" buttons do.  Please note that saving and placing presets is only supported in areas that the game allows with its built in system.  Saving presets outside of those duties will result in a preset that shows an unknown zone.  Trying to place presets outside of those duties will simply fail to do anything.</value>
-    </data>
-    <data name="HelpWindowTextGeneral6" xml:space="preserve">
-        <value>Presets can be reordered in the library by dragging and dropping them at the desired spot.  The sorting of duties in the library is by default the same as they are sorted in the game's files, and is approximately the order in which the duties were added to the game.  Duties can be drag and drop reordered if desired.  If you create your own order by doing this, newly-seen duties will appear at the bottom of the list.</value>
-    </data>
-    <data name="HelpWindowTextEditingWarningMessage" xml:space="preserve">
-        <value>SE has banned people for placing out of bounds waymarks.  Please use caution when manually editing waymark coordinates.</value>
-    </data>
-    <data name="HelpWindowTextEditing1" xml:space="preserve">
-        <value>Clicking the "Edit" button in the preset info pane will bring up a window that allows you to edit a preset.  You can adjust any of the available parameters, and you can drag waymarks on to other waymarks to swap their positions.  You can also drag points from the circle calculator tab in this help window on to a waymark in the editor window to replace its coordinates with the ones from that calculator.</value>
-    </data>
-    <data name="HelpWindowTextEditing2" xml:space="preserve">
-        <value>Changes made in the editor window will not be applied until the "Save" button is clicked.</value>
-    </data>
-    <data name="HelpWindowTextMaps1" xml:space="preserve">
-        <value>The "Map View" window displays a copy of the applicable map(s) for the selected preset's duty.  Any placed waymarks are shown on the map.  If a zone has multiple submaps, you can switch between submaps using the dropdown in the lower right corner of the window.  The world cordinates corresponding to your cursor position on the map are shown at the bottom right of the window.  Please read the "Coordinates" tab of this help window if you wish to understand the game's internal coordinate systems, and their relationship to what is presented in-game to the player.</value>
-    </data>
-    <data name="HelpWindowTextMaps2" xml:space="preserve">
-        <value>When editing a preset, you can drag waymark icons on the map to adjust their positions.  While you are doing this, the coordinate readout reflects the position of the marker, and not the position of your mouse.  Please note that editing waymarks in this manner is not advised in areas that have uneven ground, as it is not possible to automatically adjust the Y coordinate to match the terrain.</value>
-    </data>
-    <data name="HelpWindowTextMaps3" xml:space="preserve">
-        <value>Please also note that the plugin cannot currently determine which waymarks are present on which submaps, so all waymarks are shown at their positions on all submaps (provided that they are within the map's bounds).  For some rare cases (like e12s), the default submap is not the one in which you enter the area, so you will need to manually select the correct submap.</value>
-    </data>
-    <data name="HelpWindowTextCoordinates1" xml:space="preserve">
-        <value>Coordinate Systems:</value>
-    </data>
-    <data name="HelpWindowTextCoordinates2" xml:space="preserve">
-        <value>The game internally uses a right-handed 3D coordinate system, with X running West to East, Y running down to up, and Z running North to South.  The on-map coordinate system is a 2D projection of the XZ plane, with X running West to East, and Y running North to South.  Please note that the coordinates presented in chat links or on the map widgets in game are scaled to arbitrary values, and the Y and Z axes are swapped.  This plugin uses the game's internal coordinate systems as shown below:</value>
-    </data>
-    <data name="HelpWindowTextCircleComputerWarningMessage" xml:space="preserve">
-        <value>SE has banned people for placing out of bounds waymarks.  Please use caution when creating or editing a preset using this calculator.</value>
-    </data>
-    <data name="CircleComputerTextInstructions1" xml:space="preserve">
-        <value>This calculator will compute radially symmetric points ("clock spots") with the information that you give it.  You can then drag these into the preset editor to replace any waymarks with the calculated points, or you can use the buttons at the bottom of this pane.</value>
-    </data>
-    <data name="CircleComputerTextCenterPosition" xml:space="preserve">
-        <value>Center Position</value>
-    </data>
-    <data name="CircleComputerTextRadius" xml:space="preserve">
-        <value>Radius (y)</value>
-    </data>
-    <data name="CircleComputerTextNumberofPoints" xml:space="preserve">
-        <value>Number of Points</value>
-    </data>
-    <data name="CircleComputerTextAngleOffset" xml:space="preserve">
-        <value>Angle Offset (deg)</value>
-    </data>
-    <data name="DragandDropPreviewCircleComputerWaymark" xml:space="preserve">
-        <value>Copy coordinates to...</value>
-    </data>
-    <data name="ButtonCopyPointsfromCircleComputer" xml:space="preserve">
-        <value>Copy these points into the editor</value>
-    </data>
-    <data name="ButtonCreatePresetfromCircleComputer" xml:space="preserve">
-        <value>Create a new preset using these points</value>
-    </data>
-    <data name="DefaultPresetNameCircleComputer" xml:space="preserve">
-        <value>Imported from Circle Computer</value>
-    </data>
-    <data name="HeaderHelpWindowPageGeneral" xml:space="preserve">
-        <value>General</value>
-    </data>
-    <data name="HeaderHelpWindowPageEditing" xml:space="preserve">
-        <value>Editing</value>
-    </data>
-    <data name="HeaderHelpWindowPageMaps" xml:space="preserve">
-        <value>Maps</value>
-    </data>
-    <data name="HeaderHelpWindowPageCoordinates" xml:space="preserve">
-        <value>Coordinates</value>
-    </data>
-    <data name="HeaderHelpWindowPageCircleCalculator" xml:space="preserve">
-        <value>Circle Calculator</value>
-    </data>
-    <data name="WindowTitlePresetInfo" xml:space="preserve">
-        <value>Preset Info</value>
-    </data>
-    <data name="InfoPaneTextCopytoSlotLabel" xml:space="preserve">
-        <value>Copy to slot:</value>
-    </data>
-    <data name="ButtonPlace" xml:space="preserve">
-        <value>Place</value>
-    </data>
-    <data name="InfoPaneTextPresetInfoLabel" xml:space="preserve">
-        <value>Preset Info:</value>
-    </data>
-    <data name="InfoPaneTextWaymarkColumnHeader" xml:space="preserve">
-        <value>Waymark</value>
-    </data>
-    <data name="InfoPaneTextUnusedWaymark" xml:space="preserve">
-        <value>Unused</value>
-    </data>
-    <data name="InfoPaneTextZoneLabel" xml:space="preserve">
-        <value>Zone: {0}</value>
-    </data>
-    <data name="InfoPaneTextLastModifiedLabel" xml:space="preserve">
-        <value>Last Modified: {0}</value>
-    </data>
-    <data name="ButtonExporttoClipboard" xml:space="preserve">
-        <value>Export to Clipboard</value>
-    </data>
-    <data name="ButtonEdit" xml:space="preserve">
-        <value>Edit</value>
-    </data>
-    <data name="ButtonDelete" xml:space="preserve">
-        <value>Delete</value>
-    </data>
-    <data name="InfoPaneTextConfirmDeleteLabel" xml:space="preserve">
-        <value>Confirm delete: </value>
-    </data>
-    <data name="ButtonYes" xml:space="preserve">
-        <value>Yes</value>
-    </data>
-    <data name="ButtonNo" xml:space="preserve">
-        <value>No</value>
-    </data>
-    <data name="InfoPaneTextNoPresetSelected" xml:space="preserve">
-        <value>No preset selected.</value>
-    </data>
-    <data name="WindowTitleWaymarkLibrary" xml:space="preserve">
-        <value>Waymark Library</value>
-    </data>
-    <data name="ConfigOptionFilteronCurrentZone" xml:space="preserve">
-        <value>Filter on Current Zone</value>
-    </data>
-    <data name="ButtonSaveCurrentWaymarks" xml:space="preserve">
-        <value>Save Current Waymarks</value>
-    </data>
-    <data name="LibraryWindowTextZoneSearchLabel" xml:space="preserve">
-        <value>Search Zones</value>
-    </data>
-    <data name="MainWindowTextNoPresetsFound" xml:space="preserve">
-        <value>No presets match the current filter.</value>
-    </data>
-    <data name="HeaderPresets" xml:space="preserve">
-        <value>Presets</value>
-    </data>
-    <data name="MainWindowTextLibraryEmpty" xml:space="preserve">
-        <value>Preset library empty!</value>
-    </data>
-    <data name="HeaderImportOptions" xml:space="preserve">
-        <value>Import Options</value>
-    </data>
-    <data name="HeaderExportandBackupOptions" xml:space="preserve">
-        <value>Export/Backup Options</value>
-    </data>
-    <data name="DragandDropPreviewMovingPreset" xml:space="preserve">
-        <value>Moving: </value>
-    </data>
-    <data name="DragandDropPreviewMovetoBottom" xml:space="preserve">
-        <value>&lt;Move To Bottom&gt;</value>
-    </data>
-    <data name="DragandDropPreviewMovingZone" xml:space="preserve">
-        <value>Moving: </value>
-    </data>
-    <data name="DragandDropPreviewMovetoTop" xml:space="preserve">
-        <value>&lt;Move To Top&gt;</value>
-    </data>
-    <data name="TextBoxPromptImport" xml:space="preserve">
-        <value>Paste a preset here and click "Import".</value>
-    </data>
-    <data name="ButtonImport" xml:space="preserve">
-        <value>Import</value>
-    </data>
-    <data name="MainWindowTextImportfromGameSlotLabel" xml:space="preserve">
-        <value>Or import from game slot: </value>
-    </data>
-    <data name="MainWindowTextPresetResourcesLink" xml:space="preserve">
-        <value>Where to find importable presets</value>
-    </data>
-    <data name="ButtonExportAllPresetstoClipboard" xml:space="preserve">
-        <value>Export All Presets to Clipboard</value>
-    </data>
-    <data name="ButtonBackupCurrentConfig" xml:space="preserve">
-        <value>Backup Current Config</value>
-    </data>
-    <data name="HelpBackupCurrentConfig" xml:space="preserve">
-        <value>Copies the current config file to a backup folder in the Dalamud 'pluginConfigs' directory.</value>
-    </data>
-    <data name="WindowTitleMapView" xml:space="preserve">
-        <value>Map View</value>
-    </data>
-    <data name="WindowTitleMapViewEditing" xml:space="preserve">
-        <value>Map View - Editing</value>
-    </data>
-    <data name="MapWindowTextNoMapsAvailable" xml:space="preserve">
-        <value>No maps available for this zone.</value>
-    </data>
-    <data name="MapWindowTextUnnamedSubmapPlaceholder" xml:space="preserve">
-        <value>Unnamed Sub-map {0}</value>
-    </data>
-    <data name="MapWindowTextLoadingMaps" xml:space="preserve">
-        <value>Loading zone map(s).</value>
-    </data>
-    <data name="MapWindowTextUnknownZone" xml:space="preserve">
-        <value>Unknown Zone: No maps available.</value>
-    </data>
-    <data name="MapWindowTextNoPresetSelected" xml:space="preserve">
-        <value>No Preset Selected</value>
-    </data>
-    <data name="WindowTitleConfig" xml:space="preserve">
-        <value>Waymark Settings</value>
-    </data>
-    <data name="ConfigOptionAlwaysShowInfoPane" xml:space="preserve">
-        <value>Always show preset info pane.</value>
-    </data>
-    <data name="ConfigOptionClickingPresetUnselects" xml:space="preserve">
-        <value>Clicking the selected preset unselects it.</value>
-    </data>
-    <data name="ConfigOptionCategorizePresetsbyZone" xml:space="preserve">
-        <value>Categorize presets by zone.</value>
-    </data>
-    <data name="ConfigOptionOpenandClosewithGameWindow" xml:space="preserve">
-        <value>Open and close library with the game's waymark window.</value>
-    </data>
-    <data name="ConfigOptionAttachtoGameWindow" xml:space="preserve">
-        <value>Attach library window to the game's waymark window.</value>
-    </data>
-    <data name="ConfigOptionShowIDinZoneNames" xml:space="preserve">
-        <value>Show ID numbers next to zone names.</value>
-    </data>
-    <data name="HelpShowIDinZoneNames" xml:space="preserve">
-        <value>Shows the internal Content Finder ID of the zone/duty in some places.  Generally only used for debugging.</value>
-    </data>
-    <data name="ConfigOptionShowPresetIndices" xml:space="preserve">
-        <value>Show the index of the preset within the library.</value>
-    </data>
-    <data name="HelpShowPresetIndices" xml:space="preserve">
-        <value>The primary use of this is if you need to know the preset index to use within a text command.  You can always leave this disabled if you only use the GUI.</value>
-    </data>
-    <data name="ConfigOptionAllowPresetDragandDrop" xml:space="preserve">
-        <value>Allow drag and drop reordering of presets.</value>
-    </data>
-    <data name="ConfigOptionAllowZoneDragandDrop" xml:space="preserve">
-        <value>Allow drag and drop reordering of zones.</value>
-    </data>
-    <data name="HelpAllowZoneDragandDrop" xml:space="preserve">
-        <value>If this is enabled, you can change the order of preset folders sorted by zone.  New zones will be added at the bottom of the list.  This option has no effect if the 'Categorize presets by zone' option is disabled.</value>
-    </data>
-    <data name="ConfigOptionSortZonesDescending" xml:space="preserve">
-        <value>Sort zones descending (newest at the top).</value>
-    </data>
-    <data name="HelpSortZonesDescending" xml:space="preserve">
-        <value>When this is checked, zones will be sorted roughly (SE's ordering isn't perfect) newest to oldest.  When coupled with the "Allow drag and drop reordering of zones" option, new zones will be added at the top of the list (with everything else remaining in the same order below).</value>
-    </data>
-    <data name="ConfigOptionShowLibraryZoneFilterSearchBox" xml:space="preserve">
-        <value>Show search box to filter zones in library window.</value>
-    </data>
-    <data name="HelpShowLibraryZoneFilterSearchBox" xml:space="preserve">
-        <value>When this is checked, a search box will be shown at the top of the library window to filter the zones you want to see.  This has no effect when the "Categorize presets by zone" option is disabled.</value>
-    </data>
-    <data name="ConfigOptionAutoloadPresetsfromLibarary" xml:space="preserve">
-        <value>Autoload presets from library.</value>
-    </data>
-    <data name="HelpAutoloadpresetsfromLibrary" xml:space="preserve">
-        <value>Automatically loads the first five presets that exist in the library for a zone when you load into it.  THIS WILL OVERWRITE THE GAME'S SLOTS WITHOUT WARNING, so please do not turn this on until you are certain that you have saved any data that you want to keep.  Consider using this with the auto-import option below to reduce the risk of inadvertent preset loss.</value>
-    </data>
-    <data name="ConfigOptionAutosavePresetstoLibrary" xml:space="preserve">
-        <value>Autosave presets to library.</value>
-    </data>
-    <data name="HelpAutosavePresetstoLibrary" xml:space="preserve">
-        <value>Automatically copies any populated game preset slots into the library upon exiting an instance.</value>
-    </data>
-    <data name="ConfigOptionSuppressTextCommandResponses" xml:space="preserve">
-        <value>Suppress responses to text commands (besides '{0}').</value>
-    </data>
-    <data name="ButtonClearAllMapViewData" xml:space="preserve">
-        <value>Clear All Map View Data</value>
-    </data>
-    <data name="HelpClearAllMapViewData" xml:space="preserve">
-        <value>This deletes all map view pan/zoom/submap state, resetting every map back to default.</value>
-    </data>
-    <data name="SettingsWindowTextConfirmDeleteLabel" xml:space="preserve">
-        <value>Confirm delete: </value>
-    </data>
-    <data name="ButtonClearAllZoneSortData" xml:space="preserve">
-        <value>Clear All Zone Sort Data</value>
-    </data>
-    <data name="HelpClearAllZoneSortData" xml:space="preserve">
-        <value>This deletes any custom ordering of the zones in the library window, and resets the sort order back to default.</value>
-    </data>
-    <data name="ButtonSaveandClose" xml:space="preserve">
-        <value>Save and Close</value>
-    </data>
-    <data name="ButtonShowLibrary" xml:space="preserve">
-        <value>Show Library</value>
-    </data>
-    <data name="WaymarkStatusUnused" xml:space="preserve">
-        <value>Unused</value>
-    </data>
-    <data name="PresetInfoErrorZoneName1" xml:space="preserve">
-        <value>Error retrieving zone name!</value>
-    </data>
-    <data name="PresetInfoLabelZone" xml:space="preserve">
-        <value>Zone: </value>
-    </data>
-    <data name="PresetInfoLabelLastModified" xml:space="preserve">
-        <value>Last Modified: </value>
-    </data>
-    <data name="DefaultPresetName" xml:space="preserve">
-        <value>New Preset</value>
-    </data>
-    <data name="DefaultPresetNameImported" xml:space="preserve">
-        <value>Imported</value>
-    </data>
-    <data name="TerminologyZoneSortTypeBasic" xml:space="preserve">
-        <value>Sort by ID</value>
-    </data>
-    <data name="TerminologyZoneSortTypeAlphabetical" xml:space="preserve">
-        <value>Sort Alphabetically</value>
-    </data>
-    <data name="TerminologyZoneSortTypeCustom" xml:space="preserve">
-        <value>Custom Sort Order</value>
-    </data>
-    <data name="About" xml:space="preserve">
-        <value>About</value>
-    </data>
-    <data name="Settings" xml:space="preserve">
-        <value>Settings</value>
-    </data>
-    <data name="InvalidDataWarning" xml:space="preserve">
-        <value>Invalid editing data; something went very wrong.  Please press 'Cancel' and try again.</value>
-    </data>
-    <data name="Author" xml:space="preserve">
-        <value>Author:</value>
-    </data>
-    <data name="Discord" xml:space="preserve">
-        <value>Discord:</value>
-    </data>
-    <data name="Version" xml:space="preserve">
-        <value>Version:</value>
-    </data>
-    <data name="DiscordThread" xml:space="preserve">
-        <value>Discord Thread</value>
-    </data>
-    <data name="GithubIssues" xml:space="preserve">
-        <value>Issues</value>
-    </data>
-    <data name="KoFi" xml:space="preserve">
-        <value>Ko-Fi Tip</value>
-    </data>
-    <data name="Help" xml:space="preserve">
-        <value>Help</value>
-    </data>
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TextCommandDescription" xml:space="preserve">
+    <value>Performs waymark preset commands.  Use "{0}" for detailed usage information.</value>
+  </data>
+  <data name="TextCommandResponseHelpSubcommands" xml:space="preserve">
+    <value>Valid commands are as follows: {0}, {1}, {2}, {3}, {4}, and {5}.  If no command is provided, the preset library will be opened.  Type "{6} &lt;command&gt;" for detailed subcommand information.</value>
+  </data>
+  <data name="TextCommandResponseHelpConfig" xml:space="preserve">
+    <value>Opens the settings window.</value>
+  </data>
+  <data name="TextCommandResponseHelpSlotInfo" xml:space="preserve">
+    <value>Prints the data saved in the game's slots to the chat window.  Usage: "{0} slot".  The slot number can be any valid game slot.</value>
+  </data>
+  <data name="TextCommandResponseHelpPlace" xml:space="preserve">
+    <value>Places the preset with the specified name (if possible).  Quotes MUST be used around the name.  May also specify preset index without quotes instead.  Usage: "{0} &lt;name&gt;|&lt;index&gt;".  Name must match exactly (besides case).  Index can be any valid libary preset number.</value>
+  </data>
+  <data name="TextCommandResponseHelpImport" xml:space="preserve">
+    <value>Copies one of the game's five preset slots to the library.  Usage: "{0} slot".  The slot number can be any valid game slot.  Command-line import of a formatted preset string is not supported due to length restrictions in the game's chat box.</value>
+  </data>
+  <data name="TextCommandResponseHelpExport" xml:space="preserve">
+    <value>Copies a preset from the library to the specified game slot *or* copies a preset to the clipboard, depending on flags and parameters.  Usage: "{0} [{1}] [{2}] slot|index [slot]".  The slot number can be any valid game slot, and index can be any valid library preset number.  Use of the {3} flag specifies that the first number is a game slot, not a library index.  Use of the {4} flag includes the last-modified time in the clipboard export.</value>
+  </data>
+  <data name="TextCommandResponseHelpExportAll" xml:space="preserve">
+    <value>Copies all presets in the library to the clipboard, one per line.  Add {0} if you wish to include the last-modified timestamp in the export.</value>
+  </data>
+  <data name="TextCommandResponseHelp" xml:space="preserve">
+    <value>Use "{0}" to open the GUI.  Use "{1}" for a list of text commands.</value>
+  </data>
+  <data name="TextCommandResponseSlotInfoSuccess1" xml:space="preserve">
+    <value>Slot {0} Contents : {1}</value>
+  </data>
+  <data name="TextCommandResponseSlotInfoError1" xml:space="preserve">
+    <value>An unknown error occured while trying to read the game's waymark data.</value>
+  </data>
+  <data name="TextCommandResponseSlotInfoError2" xml:space="preserve">
+    <value>Unable to read game's waymark data.</value>
+  </data>
+  <data name="TextCommandResponseSlotInfoError3" xml:space="preserve">
+    <value>An invalid game slot number was provided.</value>
+  </data>
+  <data name="TextCommandResponsePlaceError1" xml:space="preserve">
+    <value>Unable to find preset "{0}".</value>
+  </data>
+  <data name="TextCommandResponsePlaceError2" xml:space="preserve">
+    <value>Invalid preset number "{0}".</value>
+  </data>
+  <data name="TextCommandResponsePlaceError3" xml:space="preserve">
+    <value>An unknown error occured placing preset {0}.</value>
+  </data>
+  <data name="TextCommandResponsePlaceError4" xml:space="preserve">
+    <value>Invalid preset number "{0}".</value>
+  </data>
+  <data name="TextCommandResponsePlaceError5" xml:space="preserve">
+    <value>Unable to place preset.  This probably means that the plugin needs to be updated for a new version of FFXIV.</value>
+  </data>
+  <data name="TextCommandResponseImportSuccess1" xml:space="preserve">
+    <value>Imported game preset {0} as library preset {1}.</value>
+  </data>
+  <data name="TextCommandResponseImportError1" xml:space="preserve">
+    <value>An unknown error occured while trying to read the game's waymark data.</value>
+  </data>
+  <data name="TextCommandResponseImportError2" xml:space="preserve">
+    <value>Unable to read game's waymark data.  This probably means that the plugin needs to be updated for a new version of FFXIV.</value>
+  </data>
+  <data name="TextCommandResponseImportError3" xml:space="preserve">
+    <value>An invalid game slot number was provided: "{0}".</value>
+  </data>
+  <data name="TextCommandResponseExportError1" xml:space="preserve">
+    <value>No slot or index numbers were provided.</value>
+  </data>
+  <data name="TextCommandResponseExportError2" xml:space="preserve">
+    <value>An invalid game slot number ({0}) was provided.</value>
+  </data>
+  <data name="TextCommandResponseExportError3" xml:space="preserve">
+    <value>An invalid library index ({0}) was provided.</value>
+  </data>
+  <data name="TextCommandResponseExportSuccess1" xml:space="preserve">
+    <value>Copied to clipboard.</value>
+  </data>
+  <data name="TextCommandResponseExportError4" xml:space="preserve">
+    <value>An invalid game slot number to export ({0}) was provided.</value>
+  </data>
+  <data name="TextCommandResponseExportError5" xml:space="preserve">
+    <value>An invalid library index ({0}) was provided.</value>
+  </data>
+  <data name="TextCommandResponseExportSuccess2" xml:space="preserve">
+    <value>Preset exported to game slot {0}.</value>
+  </data>
+  <data name="TextCommandResponseExportError6" xml:space="preserve">
+    <value>Unable to write to game slot {0}!</value>
+  </data>
+  <data name="TextCommandResponseExportError7" xml:space="preserve">
+    <value>An invalid game slot number ({0}) was provided as the target.</value>
+  </data>
+  <data name="TextCommandResponseExportError8" xml:space="preserve">
+    <value>An unknown error occured while trying to export the preset.</value>
+  </data>
+  <data name="TextCommandResponseExportAllSuccess1" xml:space="preserve">
+    <value>Waymark library copied to clipboard.</value>
+  </data>
+  <data name="TextCommandResponseExportAllError1" xml:space="preserve">
+    <value>An unknown error occured while trying to copy presets to clipboard.</value>
+  </data>
+  <data name="WindowTitleDebugTools" xml:space="preserve">
+    <value>Debug Tools</value>
+  </data>
+  <data name="WindowTitlePresetEditor" xml:space="preserve">
+    <value>Preset Editor</value>
+  </data>
+  <data name="EditWindowTextOOBWarningMessage" xml:space="preserve">
+    <value>SE has banned people for placing out of bounds waymarks.  Please use caution when manually editing waymark coordinates.</value>
+  </data>
+  <data name="EditWindowTextName" xml:space="preserve">
+    <value>Name: </value>
+  </data>
+  <data name="EditWindowTextActiveColumnHeader" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="DragandDropPreviewEditSwapWaymark" xml:space="preserve">
+    <value>Swap Waymark {0} with...</value>
+  </data>
+  <data name="EditWindowTextZoneDropdownLabel" xml:space="preserve">
+    <value>Zone: </value>
+  </data>
+  <data name="EditWindowTextZoneSearchLabel" xml:space="preserve">
+    <value>Search: </value>
+  </data>
+  <data name="ButtonSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ButtonMapView" xml:space="preserve">
+    <value>Map View</value>
+  </data>
+  <data name="WindowTitleWaymarkHelp" xml:space="preserve">
+    <value>Waymark Help</value>
+  </data>
+  <data name="HelpWindowTextGeneral1" xml:space="preserve">
+    <value>All presets in this plugin's list are fully separate from the game's presets.  This allows you to store an unlimited number of presets, as well as to easily back up and share them, or import presets that others have shared with you.</value>
+  </data>
+  <data name="HelpWindowTextGeneral2" xml:space="preserve">
+    <value>Selecting a preset in the library will show a window to the side with information about that preset, such as where the waymarks are placed, as well as actions that you can take with that preset.</value>
+  </data>
+  <data name="HelpWindowTextGeneral3" xml:space="preserve">
+    <value>If you want to copy a preset in the library to a game slot, select that preset in the list, and then press the button with the number of the slot to which you want to copy it.  If you want to import a preset from the game's list into the library, scroll down to "Import Options" and press the button of the slot that you wish to import from the game.  This is also where you can paste presets to import them from outside of the game.</value>
+  </data>
+  <data name="HelpWindowTextGeneral4" xml:space="preserve">
+    <value>If you wish to share a preset with someone else, you can select the preset in the library, and click the "Export to Clipboard" button.</value>
+  </data>
+  <data name="HelpWindowTextGeneral5" xml:space="preserve">
+    <value>The plugin also allows you to place and save waymarks directly to/from the field.  These are what the "Place" and "Save Current Waymarks" buttons do.  Please note that saving and placing presets is only supported in areas that the game allows with its built in system.  Saving presets outside of those duties will result in a preset that shows an unknown zone.  Trying to place presets outside of those duties will simply fail to do anything.</value>
+  </data>
+  <data name="HelpWindowTextGeneral6" xml:space="preserve">
+    <value>Presets can be reordered in the library by dragging and dropping them at the desired spot.  The sorting of duties in the library is by default the same as they are sorted in the game's files, and is approximately the order in which the duties were added to the game.  Duties can be drag and drop reordered if desired.  If you create your own order by doing this, newly-seen duties will appear at the bottom of the list.</value>
+  </data>
+  <data name="HelpWindowTextEditingWarningMessage" xml:space="preserve">
+    <value>SE has banned people for placing out of bounds waymarks.  Please use caution when manually editing waymark coordinates.</value>
+  </data>
+  <data name="HelpWindowTextEditing1" xml:space="preserve">
+    <value>Clicking the "Edit" button in the preset info pane will bring up a window that allows you to edit a preset.  You can adjust any of the available parameters, and you can drag waymarks on to other waymarks to swap their positions.  You can also drag points from the circle calculator tab in this help window on to a waymark in the editor window to replace its coordinates with the ones from that calculator.</value>
+  </data>
+  <data name="HelpWindowTextEditing2" xml:space="preserve">
+    <value>Changes made in the editor window will not be applied until the "Save" button is clicked.</value>
+  </data>
+  <data name="HelpWindowTextMaps1" xml:space="preserve">
+    <value>The "Map View" window displays a copy of the applicable map(s) for the selected preset's duty.  Any placed waymarks are shown on the map.  If a zone has multiple submaps, you can switch between submaps using the dropdown in the lower right corner of the window.  The world cordinates corresponding to your cursor position on the map are shown at the bottom right of the window.  Please read the "Coordinates" tab of this help window if you wish to understand the game's internal coordinate systems, and their relationship to what is presented in-game to the player.</value>
+  </data>
+  <data name="HelpWindowTextMaps2" xml:space="preserve">
+    <value>When editing a preset, you can drag waymark icons on the map to adjust their positions.  While you are doing this, the coordinate readout reflects the position of the marker, and not the position of your mouse.  Please note that editing waymarks in this manner is not advised in areas that have uneven ground, as it is not possible to automatically adjust the Y coordinate to match the terrain.</value>
+  </data>
+  <data name="HelpWindowTextMaps3" xml:space="preserve">
+    <value>Please also note that the plugin cannot currently determine which waymarks are present on which submaps, so all waymarks are shown at their positions on all submaps (provided that they are within the map's bounds).  For some rare cases (like e12s), the default submap is not the one in which you enter the area, so you will need to manually select the correct submap.</value>
+  </data>
+  <data name="HelpWindowTextCoordinates1" xml:space="preserve">
+    <value>Coordinate Systems:</value>
+  </data>
+  <data name="HelpWindowTextCoordinates2" xml:space="preserve">
+    <value>The game internally uses a right-handed 3D coordinate system, with X running West to East, Y running down to up, and Z running North to South.  The on-map coordinate system is a 2D projection of the XZ plane, with X running West to East, and Y running North to South.  Please note that the coordinates presented in chat links or on the map widgets in game are scaled to arbitrary values, and the Y and Z axes are swapped.  This plugin uses the game's internal coordinate systems as shown below:</value>
+  </data>
+  <data name="HelpWindowTextCircleComputerWarningMessage" xml:space="preserve">
+    <value>SE has banned people for placing out of bounds waymarks.  Please use caution when creating or editing a preset using this calculator.</value>
+  </data>
+  <data name="CircleComputerTextInstructions1" xml:space="preserve">
+    <value>This calculator will compute radially symmetric points ("clock spots") with the information that you give it.  You can then drag these into the preset editor to replace any waymarks with the calculated points, or you can use the buttons at the bottom of this pane.</value>
+  </data>
+  <data name="CircleComputerTextCenterPosition" xml:space="preserve">
+    <value>Center Position</value>
+  </data>
+  <data name="CircleComputerTextRadius" xml:space="preserve">
+    <value>Radius (y)</value>
+  </data>
+  <data name="CircleComputerTextNumberofPoints" xml:space="preserve">
+    <value>Number of Points</value>
+  </data>
+  <data name="CircleComputerTextAngleOffset" xml:space="preserve">
+    <value>Angle Offset (deg)</value>
+  </data>
+  <data name="DragandDropPreviewCircleComputerWaymark" xml:space="preserve">
+    <value>Copy coordinates to...</value>
+  </data>
+  <data name="ButtonCopyPointsfromCircleComputer" xml:space="preserve">
+    <value>Copy these points into the editor</value>
+  </data>
+  <data name="ButtonCreatePresetfromCircleComputer" xml:space="preserve">
+    <value>Create a new preset using these points</value>
+  </data>
+  <data name="DefaultPresetNameCircleComputer" xml:space="preserve">
+    <value>Imported from Circle Computer</value>
+  </data>
+  <data name="HeaderHelpWindowPageGeneral" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="HeaderHelpWindowPageEditing" xml:space="preserve">
+    <value>Editing</value>
+  </data>
+  <data name="HeaderHelpWindowPageMaps" xml:space="preserve">
+    <value>Maps</value>
+  </data>
+  <data name="HeaderHelpWindowPageCoordinates" xml:space="preserve">
+    <value>Coordinates</value>
+  </data>
+  <data name="HeaderHelpWindowPageCircleCalculator" xml:space="preserve">
+    <value>Circle Calculator</value>
+  </data>
+  <data name="WindowTitlePresetInfo" xml:space="preserve">
+    <value>Preset Info</value>
+  </data>
+  <data name="InfoPaneTextCopytoSlotLabel" xml:space="preserve">
+    <value>Copy to slot:</value>
+  </data>
+  <data name="ButtonPlace" xml:space="preserve">
+    <value>Place</value>
+  </data>
+  <data name="InfoPaneTextPresetInfoLabel" xml:space="preserve">
+    <value>Preset Info:</value>
+  </data>
+  <data name="InfoPaneTextWaymarkColumnHeader" xml:space="preserve">
+    <value>Waymark</value>
+  </data>
+  <data name="InfoPaneTextUnusedWaymark" xml:space="preserve">
+    <value>Unused</value>
+  </data>
+  <data name="InfoPaneTextZoneLabel" xml:space="preserve">
+    <value>Zone: {0}</value>
+  </data>
+  <data name="InfoPaneTextLastModifiedLabel" xml:space="preserve">
+    <value>Last Modified: {0}</value>
+  </data>
+  <data name="ButtonExporttoClipboard" xml:space="preserve">
+    <value>Export to Clipboard</value>
+  </data>
+  <data name="ButtonEdit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="ButtonDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="InfoPaneTextConfirmDeleteLabel" xml:space="preserve">
+    <value>Confirm delete: </value>
+  </data>
+  <data name="ButtonYes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="ButtonNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="InfoPaneTextNoPresetSelected" xml:space="preserve">
+    <value>No preset selected.</value>
+  </data>
+  <data name="WindowTitleWaymarkLibrary" xml:space="preserve">
+    <value>Waymark Library</value>
+  </data>
+  <data name="ConfigOptionFilteronCurrentZone" xml:space="preserve">
+    <value>Filter on Current Zone</value>
+  </data>
+  <data name="ButtonSaveCurrentWaymarks" xml:space="preserve">
+    <value>Save Current Waymarks</value>
+  </data>
+  <data name="LibraryWindowTextZoneSearchLabel" xml:space="preserve">
+    <value>Search Zones</value>
+  </data>
+  <data name="MainWindowTextNoPresetsFound" xml:space="preserve">
+    <value>No presets match the current filter.</value>
+  </data>
+  <data name="HeaderPresets" xml:space="preserve">
+    <value>Presets</value>
+  </data>
+  <data name="MainWindowTextLibraryEmpty" xml:space="preserve">
+    <value>Preset library empty!</value>
+  </data>
+  <data name="HeaderImportOptions" xml:space="preserve">
+    <value>Import Options</value>
+  </data>
+  <data name="HeaderExportandBackupOptions" xml:space="preserve">
+    <value>Export/Backup Options</value>
+  </data>
+  <data name="DragandDropPreviewMovingPreset" xml:space="preserve">
+    <value>Moving: </value>
+  </data>
+  <data name="DragandDropPreviewMovetoBottom" xml:space="preserve">
+    <value>&lt;Move To Bottom&gt;</value>
+  </data>
+  <data name="DragandDropPreviewMovingZone" xml:space="preserve">
+    <value>Moving: </value>
+  </data>
+  <data name="DragandDropPreviewMovetoTop" xml:space="preserve">
+    <value>&lt;Move To Top&gt;</value>
+  </data>
+  <data name="TextBoxPromptImport" xml:space="preserve">
+    <value>Paste a preset here and click "Import".</value>
+  </data>
+  <data name="ButtonImport" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="MainWindowTextImportfromGameSlotLabel" xml:space="preserve">
+    <value>Or import from game slot: </value>
+  </data>
+  <data name="MainWindowTextPresetResourcesLink" xml:space="preserve">
+    <value>Where to find importable presets</value>
+  </data>
+  <data name="ButtonExportAllPresetstoClipboard" xml:space="preserve">
+    <value>Export All Presets to Clipboard</value>
+  </data>
+  <data name="ButtonBackupCurrentConfig" xml:space="preserve">
+    <value>Backup Current Config</value>
+  </data>
+  <data name="HelpBackupCurrentConfig" xml:space="preserve">
+    <value>Copies the current config file to a backup folder in the Dalamud 'pluginConfigs' directory.</value>
+  </data>
+  <data name="WindowTitleMapView" xml:space="preserve">
+    <value>Map View</value>
+  </data>
+  <data name="WindowTitleMapViewEditing" xml:space="preserve">
+    <value>Map View - Editing</value>
+  </data>
+  <data name="MapWindowTextNoMapsAvailable" xml:space="preserve">
+    <value>No maps available for this zone.</value>
+  </data>
+  <data name="MapWindowTextUnnamedSubmapPlaceholder" xml:space="preserve">
+    <value>Unnamed Sub-map {0}</value>
+  </data>
+  <data name="MapWindowTextLoadingMaps" xml:space="preserve">
+    <value>Loading zone map(s).</value>
+  </data>
+  <data name="MapWindowTextUnknownZone" xml:space="preserve">
+    <value>Unknown Zone: No maps available.</value>
+  </data>
+  <data name="MapWindowTextNoPresetSelected" xml:space="preserve">
+    <value>No Preset Selected</value>
+  </data>
+  <data name="WindowTitleConfig" xml:space="preserve">
+    <value>Waymark Settings</value>
+  </data>
+  <data name="ConfigOptionAlwaysShowInfoPane" xml:space="preserve">
+    <value>Always show preset info pane.</value>
+  </data>
+  <data name="ConfigOptionClickingPresetUnselects" xml:space="preserve">
+    <value>Clicking the selected preset unselects it.</value>
+  </data>
+  <data name="ConfigOptionCategorizePresetsbyZone" xml:space="preserve">
+    <value>Categorize presets by zone.</value>
+  </data>
+  <data name="ConfigOptionOpenandClosewithGameWindow" xml:space="preserve">
+    <value>Open and close library with the game's waymark window.</value>
+  </data>
+  <data name="ConfigOptionAttachtoGameWindow" xml:space="preserve">
+    <value>Attach library window to the game's waymark window.</value>
+  </data>
+  <data name="ConfigOptionShowIDinZoneNames" xml:space="preserve">
+    <value>Show ID numbers next to zone names.</value>
+  </data>
+  <data name="HelpShowIDinZoneNames" xml:space="preserve">
+    <value>Shows the internal Content Finder ID of the zone/duty in some places.  Generally only used for debugging.</value>
+  </data>
+  <data name="ConfigOptionShowPresetIndices" xml:space="preserve">
+    <value>Show the index of the preset within the library.</value>
+  </data>
+  <data name="HelpShowPresetIndices" xml:space="preserve">
+    <value>The primary use of this is if you need to know the preset index to use within a text command.  You can always leave this disabled if you only use the GUI.</value>
+  </data>
+  <data name="ConfigOptionAllowPresetDragandDrop" xml:space="preserve">
+    <value>Allow drag and drop reordering of presets.</value>
+  </data>
+  <data name="ConfigOptionAllowZoneDragandDrop" xml:space="preserve">
+    <value>Allow drag and drop reordering of zones.</value>
+  </data>
+  <data name="HelpAllowZoneDragandDrop" xml:space="preserve">
+    <value>If this is enabled, you can change the order of preset folders sorted by zone.  New zones will be added at the bottom of the list.  This option has no effect if the 'Categorize presets by zone' option is disabled.</value>
+  </data>
+  <data name="ConfigOptionSortZonesDescending" xml:space="preserve">
+    <value>Sort zones descending (newest at the top).</value>
+  </data>
+  <data name="HelpSortZonesDescending" xml:space="preserve">
+    <value>When this is checked, zones will be sorted roughly (SE's ordering isn't perfect) newest to oldest.  When coupled with the "Allow drag and drop reordering of zones" option, new zones will be added at the top of the list (with everything else remaining in the same order below).</value>
+  </data>
+  <data name="ConfigOptionShowLibraryZoneFilterSearchBox" xml:space="preserve">
+    <value>Show search box to filter zones in library window.</value>
+  </data>
+  <data name="HelpShowLibraryZoneFilterSearchBox" xml:space="preserve">
+    <value>When this is checked, a search box will be shown at the top of the library window to filter the zones you want to see.  This has no effect when the "Categorize presets by zone" option is disabled.</value>
+  </data>
+  <data name="ConfigOptionAutoloadPresetsfromLibarary" xml:space="preserve">
+    <value>Autoload presets from library.</value>
+  </data>
+  <data name="HelpAutoloadpresetsfromLibrary" xml:space="preserve">
+    <value>Automatically loads the first five presets that exist in the library for a zone when you load into it.  THIS WILL OVERWRITE THE GAME'S SLOTS WITHOUT WARNING, so please do not turn this on until you are certain that you have saved any data that you want to keep.  Consider using this with the auto-import option below to reduce the risk of inadvertent preset loss.</value>
+  </data>
+  <data name="ConfigOptionAutosavePresetstoLibrary" xml:space="preserve">
+    <value>Autosave presets to library.</value>
+  </data>
+  <data name="HelpAutosavePresetstoLibrary" xml:space="preserve">
+    <value>Automatically copies any populated game preset slots into the library upon exiting an instance.</value>
+  </data>
+  <data name="ConfigOptionSuppressTextCommandResponses" xml:space="preserve">
+    <value>Suppress responses to text commands (besides '{0}').</value>
+  </data>
+  <data name="ButtonClearAllMapViewData" xml:space="preserve">
+    <value>Clear All Map View Data</value>
+  </data>
+  <data name="HelpClearAllMapViewData" xml:space="preserve">
+    <value>This deletes all map view pan/zoom/submap state, resetting every map back to default.</value>
+  </data>
+  <data name="SettingsWindowTextConfirmDeleteLabel" xml:space="preserve">
+    <value>Confirm delete: </value>
+  </data>
+  <data name="ButtonClearAllZoneSortData" xml:space="preserve">
+    <value>Clear All Zone Sort Data</value>
+  </data>
+  <data name="HelpClearAllZoneSortData" xml:space="preserve">
+    <value>This deletes any custom ordering of the zones in the library window, and resets the sort order back to default.</value>
+  </data>
+  <data name="ButtonSaveandClose" xml:space="preserve">
+    <value>Save and Close</value>
+  </data>
+  <data name="ButtonShowLibrary" xml:space="preserve">
+    <value>Show Library</value>
+  </data>
+  <data name="WaymarkStatusUnused" xml:space="preserve">
+    <value>Unused</value>
+  </data>
+  <data name="PresetInfoErrorZoneName1" xml:space="preserve">
+    <value>Error retrieving zone name!</value>
+  </data>
+  <data name="PresetInfoLabelZone" xml:space="preserve">
+    <value>Zone: </value>
+  </data>
+  <data name="PresetInfoLabelLastModified" xml:space="preserve">
+    <value>Last Modified: </value>
+  </data>
+  <data name="DefaultPresetName" xml:space="preserve">
+    <value>New Preset</value>
+  </data>
+  <data name="DefaultPresetNameImported" xml:space="preserve">
+    <value>Imported</value>
+  </data>
+  <data name="TerminologyZoneSortTypeBasic" xml:space="preserve">
+    <value>Sort by ID</value>
+  </data>
+  <data name="TerminologyZoneSortTypeAlphabetical" xml:space="preserve">
+    <value>Sort Alphabetically</value>
+  </data>
+  <data name="TerminologyZoneSortTypeCustom" xml:space="preserve">
+    <value>Custom Sort Order</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="InvalidDataWarning" xml:space="preserve">
+    <value>Invalid editing data; something went very wrong.  Please press 'Cancel' and try again.</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Author:</value>
+  </data>
+  <data name="Discord" xml:space="preserve">
+    <value>Discord:</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version:</value>
+  </data>
+  <data name="DiscordThread" xml:space="preserve">
+    <value>Discord Thread</value>
+  </data>
+  <data name="GithubIssues" xml:space="preserve">
+    <value>Issues</value>
+  </data>
+  <data name="KoFi" xml:space="preserve">
+    <value>Ko-Fi Tip</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="CircleComputerTextMarkerOrder" xml:space="preserve">
+    <value>Marker Order</value>
+  </data>
 </root>
