@@ -1,0 +1,509 @@
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="TextCommandDescription" xml:space="preserve">
+        <value>웨이마크 프리셋 명령을 실행합니다. 자세한 사용법 참고: "{0}"</value>
+    </data>
+    <data name="TextCommandResponseHelpSubcommands" xml:space="preserve">
+        <value>유효한 명령어는 다음과 같습니다: {0}, {1}, {2}, {3}, {4}, {5}. 명령어를 입력하지 않으면 프리셋 라이브러리가 열립니다. 자세한 하위 명령어 정보는 "{6} &lt;command&gt;"를 입력하세요.</value>
+    </data>
+    <data name="TextCommandResponseHelpConfig" xml:space="preserve">
+        <value>설정 창을 엽니다.</value>
+    </data>
+    <data name="TextCommandResponseHelpSlotInfo" xml:space="preserve">
+        <value>게임 슬롯에 저장된 데이터를 채팅창에 출력합니다. 사용법: "{0} slot". 슬롯 번호는 유효한 게임 슬롯이어야 합니다.</value>
+    </data>
+    <data name="TextCommandResponseHelpPlace" xml:space="preserve">
+        <value>지정한 이름의 프리셋을 배치합니다(가능한 경우). 이름에는 반드시 따옴표를 사용해야 합니다. 또는 따옴표 없이 프리셋 인덱스를 지정할 수도 있습니다. 사용법: "{0} &lt;name&gt;|&lt;index&gt;". 이름은 대소문자를 제외하고 정확히 일치해야 합니다. 인덱스는 유효한 라이브러리 프리셋 번호여야 합니다.</value>
+    </data>
+    <data name="TextCommandResponseHelpImport" xml:space="preserve">
+        <value>게임의 다섯 개 프리셋 슬롯 중 하나를 라이브러리로 복사합니다. 사용법: "{0} slot". 슬롯 번호는 유효한 게임 슬롯이어야 합니다. 게임 채팅창의 길이 제한으로 인해 명령줄에서 포맷된 프리셋 문자열을 가져오는 것은 지원되지 않습니다.</value>
+    </data>
+    <data name="TextCommandResponseHelpExport" xml:space="preserve">
+        <value>라이브러리에서 지정한 게임 슬롯으로 프리셋을 복사하거나, 플래그와 매개변수에 따라 프리셋을 클립보드로 복사합니다. 사용법: "{0} [{1}] [{2}] slot|index [slot]". 슬롯 번호는 유효한 게임 슬롯, 인덱스는 유효한 라이브러리 프리셋 번호여야 합니다. {3} 플래그를 사용하면 첫 번째 숫자가 게임 슬롯임을 지정합니다. {4} 플래그를 사용하면 클립보드 내보내기에 마지막 수정 시간이 포함됩니다.</value>
+    </data>
+    <data name="TextCommandResponseHelpExportAll" xml:space="preserve">
+        <value>라이브러리의 모든 프리셋을 한 줄에 하나씩 클립보드로 복사합니다. 내보내기에 마지막 수정 시간을 포함하려면 다음을 추가하세요: {0}를 추가하세요.</value>
+    </data>
+    <data name="TextCommandResponseHelp" xml:space="preserve">
+        <value>GUI를 열려면 "{0}"를 사용하세요. 텍스트 명령어 목록은 "{1}"를 참고하세요.</value>
+    </data>
+    <data name="TextCommandResponseSlotInfoSuccess1" xml:space="preserve">
+        <value>슬롯 {0} 내용: {1}</value>
+    </data>
+    <data name="TextCommandResponseSlotInfoError1" xml:space="preserve">
+        <value>게임의 웨이마크 데이터를 읽는 중 알 수 없는 오류가 발생했습니다.</value>
+    </data>
+    <data name="TextCommandResponseSlotInfoError2" xml:space="preserve">
+        <value>게임의 웨이마크 데이터를 읽을 수 없습니다.</value>
+    </data>
+    <data name="TextCommandResponseSlotInfoError3" xml:space="preserve">
+        <value>잘못된 게임 슬롯 번호가 입력되었습니다.</value>
+    </data>
+    <data name="TextCommandResponsePlaceError1" xml:space="preserve">
+        <value>프리셋({0})을 찾을 수 없습니다.</value>
+    </data>
+    <data name="TextCommandResponsePlaceError2" xml:space="preserve">
+        <value>잘못된 프리셋 번호 "{0}"입니다.</value>
+    </data>
+    <data name="TextCommandResponsePlaceError3" xml:space="preserve">
+        <value>프리셋({0})을 배치하는 중 알 수 없는 오류가 발생했습니다.</value>
+    </data>
+    <data name="TextCommandResponsePlaceError4" xml:space="preserve">
+        <value>잘못된 프리셋 번호 "{0}"입니다.</value>
+    </data>
+    <data name="TextCommandResponsePlaceError5" xml:space="preserve">
+        <value>프리셋을 배치할 수 없습니다. 플러그인이 FFXIV의 새로운 버전에 맞게 업데이트되어야 할 수 있습니다.</value>
+    </data>
+    <data name="TextCommandResponseImportSuccess1" xml:space="preserve">
+        <value>게임 프리셋({0})을 라이브러리 프리셋({1})으로 가져왔습니다.</value>
+    </data>
+    <data name="TextCommandResponseImportError1" xml:space="preserve">
+        <value>게임의 웨이마크 데이터를 읽는 중 알 수 없는 오류가 발생했습니다.</value>
+    </data>
+    <data name="TextCommandResponseImportError2" xml:space="preserve">
+        <value>게임의 웨이마크 데이터를 읽을 수 없습니다. 플러그인이 FFXIV의 새로운 버전에 맞게 업데이트되어야 할 수 있습니다.</value>
+    </data>
+    <data name="TextCommandResponseImportError3" xml:space="preserve">
+        <value>잘못된 게임 슬롯 번호가 입력되었습니다: "{0}".</value>
+    </data>
+    <data name="TextCommandResponseExportError1" xml:space="preserve">
+        <value>슬롯 또는 인덱스 번호가 입력되지 않았습니다.</value>
+    </data>
+    <data name="TextCommandResponseExportError2" xml:space="preserve">
+        <value>잘못된 게임 슬롯 번호({0})가 입력되었습니다.</value>
+    </data>
+    <data name="TextCommandResponseExportError3" xml:space="preserve">
+        <value>잘못된 라이브러리 인덱스({0})가 입력되었습니다.</value>
+    </data>
+    <data name="TextCommandResponseExportSuccess1" xml:space="preserve">
+        <value>클립보드에 복사되었습니다.</value>
+    </data>
+    <data name="TextCommandResponseExportError4" xml:space="preserve">
+        <value>내보낼 게임 슬롯 번호({0})가 잘못되었습니다.</value>
+    </data>
+    <data name="TextCommandResponseExportError5" xml:space="preserve">
+        <value>잘못된 라이브러리 인덱스({0})가 입력되었습니다.</value>
+    </data>
+    <data name="TextCommandResponseExportSuccess2" xml:space="preserve">
+        <value>프리셋이 게임 슬롯({0})으로 내보내졌습니다.</value>
+    </data>
+    <data name="TextCommandResponseExportError6" xml:space="preserve">
+        <value>게임 슬롯({0})으로 쓸 수 없습니다!</value>
+    </data>
+    <data name="TextCommandResponseExportError7" xml:space="preserve">
+        <value>대상으로 지정된 게임 슬롯 번호({0})가 잘못되었습니다.</value>
+    </data>
+    <data name="TextCommandResponseExportError8" xml:space="preserve">
+        <value>프리셋을 내보내는 중 알 수 없는 오류가 발생했습니다.</value>
+    </data>
+    <data name="TextCommandResponseExportAllSuccess1" xml:space="preserve">
+        <value>웨이마크 라이브러리가 클립보드에 복사되었습니다.</value>
+    </data>
+    <data name="TextCommandResponseExportAllError1" xml:space="preserve">
+        <value>프리셋을 클립보드로 복사하는 중 알 수 없는 오류가 발생했습니다.</value>
+    </data>
+    <data name="WindowTitleDebugTools" xml:space="preserve">
+        <value>디버그 도구</value>
+    </data>
+    <data name="WindowTitlePresetEditor" xml:space="preserve">
+        <value>프리셋 편집기</value>
+    </data>
+    <data name="EditWindowTextOOBWarningMessage" xml:space="preserve">
+        <value>SE는 경계 밖 웨이마크 배치로 이용자를 정지시킨 사례가 있습니다. 웨이마크 좌표를 수동으로 편집할 때 주의하세요.</value>
+    </data>
+    <data name="EditWindowTextName" xml:space="preserve">
+        <value>이름: </value>
+    </data>
+    <data name="EditWindowTextActiveColumnHeader" xml:space="preserve">
+        <value>활성화</value>
+    </data>
+    <data name="DragandDropPreviewEditSwapWaymark" xml:space="preserve">
+        <value>웨이마크({0})를 다음으로 바꿈...</value>
+    </data>
+    <data name="EditWindowTextZoneDropdownLabel" xml:space="preserve">
+        <value>지역: </value>
+    </data>
+    <data name="EditWindowTextZoneSearchLabel" xml:space="preserve">
+        <value>검색: </value>
+    </data>
+    <data name="ButtonSave" xml:space="preserve">
+        <value>저장</value>
+    </data>
+    <data name="ButtonCancel" xml:space="preserve">
+        <value>취소</value>
+    </data>
+    <data name="ButtonMapView" xml:space="preserve">
+        <value>지도 보기</value>
+    </data>
+    <data name="WindowTitleWaymarkHelp" xml:space="preserve">
+        <value>웨이마크 도움말</value>
+    </data>
+    <data name="HelpWindowTextGeneral1" xml:space="preserve">
+        <value>이 플러그인의 프리셋 목록에 있는 모든 프리셋은 게임의 프리셋과 완전히 분리되어 있습니다. 이를 통해 무제한의 프리셋을 저장하고, 쉽게 백업 및 공유하거나, 다른 사람이 공유한 프리셋을 가져올 수 있습니다.</value>
+    </data>
+    <data name="HelpWindowTextGeneral2" xml:space="preserve">
+        <value>라이브러리에서 프리셋을 선택하면 해당 프리셋의 웨이마크 위치 등 정보를 보여주는 창이 옆에 표시되며, 해당 프리셋에 대해 수행할 수 있는 작업도 표시됩니다.</value>
+    </data>
+    <data name="HelpWindowTextGeneral3" xml:space="preserve">
+        <value>라이브러리의 프리셋을 게임 슬롯에 복사하려면 목록에서 프리셋을 선택한 후 복사하려는 슬롯 번호가 적힌 버튼을 누르세요. 게임의 프리셋을 라이브러리로 가져오려면 "가져오기 옵션"에서 가져오려는 슬롯의 버튼을 누르세요. 외부에서 프리셋을 가져올 때도 이곳을 사용합니다.</value>
+    </data>
+    <data name="HelpWindowTextGeneral4" xml:space="preserve">
+        <value>다른 사람과 프리셋을 공유하려면 라이브러리에서 프리셋을 선택한 후 "클립보드로 내보내기" 버튼을 클릭하세요.</value>
+    </data>
+    <data name="HelpWindowTextGeneral5" xml:space="preserve">
+        <value>플러그인은 필드에서 웨이마크를 직접 배치하거나 저장하는 것도 지원합니다. "배치" 및 "현재 웨이마크 저장" 버튼이 이 기능을 수행합니다. 단, 프리셋 저장 및 배치는 게임의 내장 시스템이 허용하는 지역에서만 지원됩니다. 해당 임무 외 지역에서 저장하면 '알 수 없는 지역'으로 표시됩니다. 임무 외 지역에서 프리셋을 배치하면 아무 일도 일어나지 않습니다.</value>
+    </data>
+    <data name="HelpWindowTextGeneral6" xml:space="preserve">
+        <value>프리셋은 라이브러리에서 드래그 앤 드롭으로 순서를 변경할 수 있습니다. 임무(지역) 정렬은 기본적으로 게임 파일의 정렬과 동일하며, 대략적으로 추가된 순서입니다. 임무도 드래그 앤 드롭으로 재정렬할 수 있습니다. 직접 순서를 지정하면 새로 본 임무는 목록 하단에 추가됩니다.</value>
+    </data>
+    <data name="HelpWindowTextEditingWarningMessage" xml:space="preserve">
+        <value>SE는 경계 밖 웨이마크 배치로 이용자를 정지시킨 사례가 있습니다. 웨이마크 좌표를 수동으로 편집할 때 주의하세요.</value>
+    </data>
+    <data name="HelpWindowTextEditing1" xml:space="preserve">
+        <value>프리셋 정보 창에서 "편집" 버튼을 클릭하면 프리셋을 편집할 수 있는 창이 열립니다. 모든 매개변수를 조정할 수 있으며, 웨이마크를 다른 웨이마크로 드래그하여 위치를 바꿀 수 있습니다. 또한 이 도움말 창의 원형 계산기 탭에서 점을 드래그하여 편집기 창의 웨이마크에 좌표를 적용할 수 있습니다.</value>
+    </data>
+    <data name="HelpWindowTextEditing2" xml:space="preserve">
+        <value>편집기 창에서 변경한 내용은 "저장" 버튼을 누르기 전까지 적용되지 않습니다.</value>
+    </data>
+    <data name="HelpWindowTextMaps1" xml:space="preserve">
+        <value>"지도 보기" 창에서는 선택한 프리셋의 임무에 해당하는 지도를 보여줍니다. 배치된 웨이마크는 지도에 표시됩니다. 지역에 여러 하위 지도가 있으면 창 오른쪽 하단의 드롭다운에서 전환할 수 있습니다. 지도 하단 오른쪽에는 마우스 커서 위치의 월드 좌표가 표시됩니다. 게임의 내부 좌표계와 실제 게임 내 표시와의 관계는 도움말의 "좌표" 탭을 참고하세요.</value>
+    </data>
+    <data name="HelpWindowTextMaps2" xml:space="preserve">
+        <value>프리셋을 편집할 때 지도에서 웨이마크 아이콘을 드래그하여 위치를 조정할 수 있습니다. 이때 좌표 표시창은 마우스 위치가 아니라 마커 위치를 반영합니다. 지형이 고르지 않은 지역에서는 이 방법으로 편집하는 것이 권장되지 않습니다. Y 좌표를 자동으로 지형에 맞게 조정할 수 없기 때문입니다.</value>
+    </data>
+    <data name="HelpWindowTextMaps3" xml:space="preserve">
+        <value>플러그인은 현재 웨이마크가 어떤 하위 지도에 있는지 자동으로 판단할 수 없으므로, 모든 웨이마크가 모든 하위 지도에 표시됩니다(지도 범위 내에 있을 경우). 일부 특수한 경우(예: e12s)에는 기본 하위 지도가 입장 시점과 다를 수 있으니, 직접 올바른 하위 지도를 선택해야 합니다.</value>
+    </data>
+    <data name="HelpWindowTextCoordinates1" xml:space="preserve">
+        <value>좌표계:</value>
+    </data>
+    <data name="HelpWindowTextCoordinates2" xml:space="preserve">
+        <value>게임은 내부적으로 오른손 좌표계의 3D 좌표계를 사용합니다. X는 동서, Y는 위아래, Z는 남북 방향입니다. 지도상의 좌표계는 XZ 평면의 2D 투영이며, X는 동서, Y는 남북 방향입니다. 채팅 링크나 게임 내 지도 위젯에 표시되는 좌표는 임의의 값으로 스케일링되며, Y와 Z축이 바뀌어 있습니다. 이 플러그인은 아래와 같이 게임의 내부 좌표계를 사용합니다:</value>
+    </data>
+    <data name="HelpWindowTextCircleComputerWarningMessage" xml:space="preserve">
+        <value>SE는 경계 밖 웨이마크 배치로 이용자를 정지시킨 사례가 있습니다. 이 계산기를 사용해 프리셋을 생성하거나 편집할 때 주의하세요.</value>
+    </data>
+    <data name="CircleComputerTextInstructions1" xml:space="preserve">
+        <value>이 계산기는 주어진 정보를 바탕으로 방사형 대칭 점("시계방향 위치")을 계산합니다. 계산된 점을 프리셋 편집기로 드래그하여 웨이마크 좌표를 대체하거나, 아래 버튼을 사용할 수 있습니다.</value>
+    </data>
+    <data name="CircleComputerTextCenterPosition" xml:space="preserve">
+        <value>중심 위치</value>
+    </data>
+    <data name="CircleComputerTextRadius" xml:space="preserve">
+        <value>반지름 (y)</value>
+    </data>
+    <data name="CircleComputerTextNumberofPoints" xml:space="preserve">
+        <value>점 개수</value>
+    </data>
+    <data name="CircleComputerTextAngleOffset" xml:space="preserve">
+        <value>각도 오프셋 (도)</value>
+    </data>
+    <data name="DragandDropPreviewCircleComputerWaymark" xml:space="preserve">
+        <value>좌표 복사 대상...</value>
+    </data>
+    <data name="ButtonCopyPointsfromCircleComputer" xml:space="preserve">
+        <value>이 점들을 편집기에 복사</value>
+    </data>
+    <data name="ButtonCreatePresetfromCircleComputer" xml:space="preserve">
+        <value>이 점들로 새 프리셋 생성</value>
+    </data>
+    <data name="DefaultPresetNameCircleComputer" xml:space="preserve">
+        <value>원형 계산기에서 가져옴</value>
+    </data>
+    <data name="HeaderHelpWindowPageGeneral" xml:space="preserve">
+        <value>일반</value>
+    </data>
+    <data name="HeaderHelpWindowPageEditing" xml:space="preserve">
+        <value>편집</value>
+    </data>
+    <data name="HeaderHelpWindowPageMaps" xml:space="preserve">
+        <value>지도</value>
+    </data>
+    <data name="HeaderHelpWindowPageCoordinates" xml:space="preserve">
+        <value>좌표</value>
+    </data>
+    <data name="HeaderHelpWindowPageCircleCalculator" xml:space="preserve">
+        <value>원형 계산기</value>
+    </data>
+    <data name="WindowTitlePresetInfo" xml:space="preserve">
+        <value>프리셋 정보</value>
+    </data>
+    <data name="InfoPaneTextCopytoSlotLabel" xml:space="preserve">
+        <value>슬롯으로 복사:</value>
+    </data>
+    <data name="ButtonPlace" xml:space="preserve">
+        <value>배치</value>
+    </data>
+    <data name="InfoPaneTextPresetInfoLabel" xml:space="preserve">
+        <value>프리셋 정보:</value>
+    </data>
+    <data name="InfoPaneTextWaymarkColumnHeader" xml:space="preserve">
+        <value>웨이마크</value>
+    </data>
+    <data name="InfoPaneTextUnusedWaymark" xml:space="preserve">
+        <value>미사용</value>
+    </data>
+    <data name="InfoPaneTextZoneLabel" xml:space="preserve">
+        <value>지역: {0}</value>
+    </data>
+    <data name="InfoPaneTextLastModifiedLabel" xml:space="preserve">
+        <value>마지막 수정: {0}</value>
+    </data>
+    <data name="ButtonExporttoClipboard" xml:space="preserve">
+        <value>클립보드로 내보내기</value>
+    </data>
+    <data name="ButtonEdit" xml:space="preserve">
+        <value>편집</value>
+    </data>
+    <data name="ButtonDelete" xml:space="preserve">
+        <value>삭제</value>
+    </data>
+    <data name="InfoPaneTextConfirmDeleteLabel" xml:space="preserve">
+        <value>삭제 확인: </value>
+    </data>
+    <data name="ButtonYes" xml:space="preserve">
+        <value>예</value>
+    </data>
+    <data name="ButtonNo" xml:space="preserve">
+        <value>아니오</value>
+    </data>
+    <data name="InfoPaneTextNoPresetSelected" xml:space="preserve">
+        <value>선택된 프리셋이 없습니다.</value>
+    </data>
+    <data name="WindowTitleWaymarkLibrary" xml:space="preserve">
+        <value>웨이마크 라이브러리</value>
+    </data>
+    <data name="ConfigOptionFilteronCurrentZone" xml:space="preserve">
+        <value>현재 지역으로 필터링</value>
+    </data>
+    <data name="ButtonSaveCurrentWaymarks" xml:space="preserve">
+        <value>현재 웨이마크 저장</value>
+    </data>
+    <data name="LibraryWindowTextZoneSearchLabel" xml:space="preserve">
+        <value>지역 검색</value>
+    </data>
+    <data name="MainWindowTextNoPresetsFound" xml:space="preserve">
+        <value>현재 필터에 맞는 프리셋이 없습니다.</value>
+    </data>
+    <data name="HeaderPresets" xml:space="preserve">
+        <value>프리셋</value>
+    </data>
+    <data name="MainWindowTextLibraryEmpty" xml:space="preserve">
+        <value>프리셋 라이브러리가 비어 있습니다!</value>
+    </data>
+    <data name="HeaderImportOptions" xml:space="preserve">
+        <value>가져오기 옵션</value>
+    </data>
+    <data name="HeaderExportandBackupOptions" xml:space="preserve">
+        <value>내보내기/백업 옵션</value>
+    </data>
+    <data name="DragandDropPreviewMovingPreset" xml:space="preserve">
+        <value>이동 중: </value>
+    </data>
+    <data name="DragandDropPreviewMovetoBottom" xml:space="preserve">
+        <value>&lt;맨 아래로 이동&gt;</value>
+    </data>
+    <data name="DragandDropPreviewMovingZone" xml:space="preserve">
+        <value>이동 중: </value>
+    </data>
+    <data name="DragandDropPreviewMovetoTop" xml:space="preserve">
+        <value>&lt;맨 위로 이동&gt;</value>
+    </data>
+    <data name="TextBoxPromptImport" xml:space="preserve">
+        <value>프리셋을 여기에 붙여넣고 "가져오기"를 클릭하세요.</value>
+    </data>
+    <data name="ButtonImport" xml:space="preserve">
+        <value>가져오기</value>
+    </data>
+    <data name="MainWindowTextImportfromGameSlotLabel" xml:space="preserve">
+        <value>또는 게임 슬롯에서 가져오기: </value>
+    </data>
+    <data name="MainWindowTextPresetResourcesLink" xml:space="preserve">
+        <value>가져올 수 있는 프리셋 찾기</value>
+    </data>
+    <data name="ButtonExportAllPresetstoClipboard" xml:space="preserve">
+        <value>모든 프리셋 클립보드로 내보내기</value>
+    </data>
+    <data name="ButtonBackupCurrentConfig" xml:space="preserve">
+        <value>현재 설정 백업</value>
+    </data>
+    <data name="HelpBackupCurrentConfig" xml:space="preserve">
+        <value>현재 설정 파일을 Dalamud 'pluginConfigs' 디렉터리의 백업 폴더에 복사합니다.</value>
+    </data>
+    <data name="WindowTitleMapView" xml:space="preserve">
+        <value>지도 보기</value>
+    </data>
+    <data name="WindowTitleMapViewEditing" xml:space="preserve">
+        <value>지도 보기 - 편집 중</value>
+    </data>
+    <data name="MapWindowTextNoMapsAvailable" xml:space="preserve">
+        <value>이 지역에는 사용할 수 있는 지도가 없습니다.</value>
+    </data>
+    <data name="MapWindowTextUnnamedSubmapPlaceholder" xml:space="preserve">
+        <value>이름 없는 하위 지도 {0}</value>
+    </data>
+    <data name="MapWindowTextLoadingMaps" xml:space="preserve">
+        <value>지역 지도 불러오는 중.</value>
+    </data>
+    <data name="MapWindowTextUnknownZone" xml:space="preserve">
+        <value>알 수 없는 지역: 지도가 없습니다.</value>
+    </data>
+    <data name="MapWindowTextNoPresetSelected" xml:space="preserve">
+        <value>선택된 프리셋 없음</value>
+    </data>
+    <data name="WindowTitleConfig" xml:space="preserve">
+        <value>웨이마크 설정</value>
+    </data>
+    <data name="ConfigOptionAlwaysShowInfoPane" xml:space="preserve">
+        <value>항상 프리셋 정보 창 표시</value>
+    </data>
+    <data name="ConfigOptionClickingPresetUnselects" xml:space="preserve">
+        <value>선택된 프리셋 클릭 시 선택 해제</value>
+    </data>
+    <data name="ConfigOptionCategorizePresetsbyZone" xml:space="preserve">
+        <value>지역별로 프리셋 분류</value>
+    </data>
+    <data name="ConfigOptionOpenandClosewithGameWindow" xml:space="preserve">
+        <value>게임 웨이마크 창과 함께 라이브러리 열고 닫기</value>
+    </data>
+    <data name="ConfigOptionAttachtoGameWindow" xml:space="preserve">
+        <value>라이브러리 창을 게임 웨이마크 창에 붙이기</value>
+    </data>
+    <data name="ConfigOptionShowIDinZoneNames" xml:space="preserve">
+        <value>지역 이름 옆에 ID 표시</value>
+    </data>
+    <data name="HelpShowIDinZoneNames" xml:space="preserve">
+        <value>일부 위치에서 지역/임무의 내부 Content Finder ID를 표시합니다. 주로 디버깅용입니다.</value>
+    </data>
+    <data name="ConfigOptionShowPresetIndices" xml:space="preserve">
+        <value>라이브러리 내 프리셋 인덱스 표시</value>
+    </data>
+    <data name="HelpShowPresetIndices" xml:space="preserve">
+        <value>이 기능은 텍스트 명령어에서 사용할 프리셋 인덱스를 알아야 할 때 주로 사용합니다. GUI만 사용할 경우 비활성화해도 무방합니다.</value>
+    </data>
+    <data name="ConfigOptionAllowPresetDragandDrop" xml:space="preserve">
+        <value>프리셋 드래그 앤 드롭 정렬 허용</value>
+    </data>
+    <data name="ConfigOptionAllowZoneDragandDrop" xml:space="preserve">
+        <value>지역 드래그 앤 드롭 정렬 허용</value>
+    </data>
+    <data name="HelpAllowZoneDragandDrop" xml:space="preserve">
+        <value>이 옵션을 활성화하면 라이브러리 창에서 지역별 프리셋 폴더의 순서를 변경할 수 있습니다. 새 지역은 목록 하단에 추가됩니다. '지역별로 프리셋 분류' 옵션이 비활성화된 경우에는 효과가 없습니다.</value>
+    </data>
+    <data name="ConfigOptionSortZonesDescending" xml:space="preserve">
+        <value>지역 내림차순 정렬(최신이 위)</value>
+    </data>
+    <data name="HelpSortZonesDescending" xml:space="preserve">
+        <value>이 옵션을 체크하면 지역이 대략적으로(정확하지 않을 수 있음) 최신순으로 정렬됩니다. "지역 드래그 앤 드롭 정렬 허용" 옵션과 함께 사용하면 새 지역이 목록 상단에 추가됩니다(기존 순서는 그대로 유지).</value>
+    </data>
+    <data name="ConfigOptionShowLibraryZoneFilterSearchBox" xml:space="preserve">
+        <value>라이브러리 창에 지역 필터 검색창 표시</value>
+    </data>
+    <data name="HelpShowLibraryZoneFilterSearchBox" xml:space="preserve">
+        <value>이 옵션을 체크하면 라이브러리 창 상단에 지역 필터용 검색창이 표시됩니다. "지역별로 프리셋 분류" 옵션이 비활성화된 경우에는 효과가 없습니다.</value>
+    </data>
+    <data name="ConfigOptionAutoloadPresetsfromLibarary" xml:space="preserve">
+        <value>라이브러리에서 프리셋 자동 불러오기</value>
+    </data>
+    <data name="HelpAutoloadpresetsfromLibrary" xml:space="preserve">
+        <value>지역에 진입할 때 라이브러리에서 해당 지역의 첫 다섯 개 프리셋을 자동으로 불러옵니다. 이 기능을 사용하면 게임 슬롯이 경고 없이 덮어써지므로, 중요한 데이터는 반드시 저장 후 사용하세요. 아래의 자동 가져오기 옵션과 함께 사용하면 프리셋 손실 위험을 줄일 수 있습니다.</value>
+    </data>
+    <data name="ConfigOptionAutosavePresetstoLibrary" xml:space="preserve">
+        <value>프리셋을 라이브러리에 자동 저장</value>
+    </data>
+    <data name="HelpAutosavePresetstoLibrary" xml:space="preserve">
+        <value>인스턴스에서 나갈 때 채워진 게임 프리셋 슬롯을 자동으로 라이브러리에 복사합니다.</value>
+    </data>
+    <data name="ConfigOptionSuppressTextCommandResponses" xml:space="preserve">
+        <value>텍스트 명령어 응답 숨기기('{0}' 제외)</value>
+    </data>
+    <data name="ButtonClearAllMapViewData" xml:space="preserve">
+        <value>모든 지도 보기 데이터 초기화</value>
+    </data>
+    <data name="HelpClearAllMapViewData" xml:space="preserve">
+        <value>모든 지도 보기의 이동/확대/하위 지도 상태를 삭제하여 기본값으로 초기화합니다.</value>
+    </data>
+    <data name="SettingsWindowTextConfirmDeleteLabel" xml:space="preserve">
+        <value>삭제 확인: </value>
+    </data>
+    <data name="ButtonClearAllZoneSortData" xml:space="preserve">
+        <value>모든 지역 정렬 데이터 초기화</value>
+    </data>
+    <data name="HelpClearAllZoneSortData" xml:space="preserve">
+        <value>라이브러리 창에서 지역의 사용자 지정 정렬 순서를 삭제하고 기본 정렬로 초기화합니다.</value>
+    </data>
+    <data name="ButtonSaveandClose" xml:space="preserve">
+        <value>저장 후 닫기</value>
+    </data>
+    <data name="ButtonShowLibrary" xml:space="preserve">
+        <value>라이브러리 표시</value>
+    </data>
+    <data name="WaymarkStatusUnused" xml:space="preserve">
+        <value>미사용</value>
+    </data>
+    <data name="PresetInfoErrorZoneName1" xml:space="preserve">
+        <value>지역 이름을 가져오는 중 오류 발생!</value>
+    </data>
+    <data name="PresetInfoLabelZone" xml:space="preserve">
+        <value>지역: </value>
+    </data>
+    <data name="PresetInfoLabelLastModified" xml:space="preserve">
+        <value>마지막 수정: </value>
+    </data>
+    <data name="DefaultPresetName" xml:space="preserve">
+        <value>새 프리셋</value>
+    </data>
+    <data name="DefaultPresetNameImported" xml:space="preserve">
+        <value>가져옴</value>
+    </data>
+    <data name="TerminologyZoneSortTypeBasic" xml:space="preserve">
+        <value>ID로 정렬</value>
+    </data>
+    <data name="TerminologyZoneSortTypeAlphabetical" xml:space="preserve">
+        <value>이름으로 정렬</value>
+    </data>
+    <data name="TerminologyZoneSortTypeCustom" xml:space="preserve">
+        <value>사용자 지정 정렬</value>
+    </data>
+    <data name="About" xml:space="preserve">
+        <value>정보</value>
+    </data>
+    <data name="Settings" xml:space="preserve">
+        <value>설정</value>
+    </data>
+    <data name="InvalidDataWarning" xml:space="preserve">
+        <value>잘못된 편집 데이터입니다. 문제가 발생했습니다. '취소'를 누르고 다시 시도하세요.</value>
+    </data>
+    <data name="Author" xml:space="preserve">
+        <value>제작자:</value>
+    </data>
+    <data name="Discord" xml:space="preserve">
+        <value>디스코드:</value>
+    </data>
+    <data name="Version" xml:space="preserve">
+        <value>버전:</value>
+    </data>
+    <data name="DiscordThread" xml:space="preserve">
+        <value>디스코드 스레드</value>
+    </data>
+    <data name="GithubIssues" xml:space="preserve">
+        <value>이슈</value>
+    </data>
+    <data name="KoFi" xml:space="preserve">
+        <value>Ko-Fi 후원</value>
+    </data>
+    <data name="Help" xml:space="preserve">
+        <value>도움말</value>
+    </data>
+</root>
